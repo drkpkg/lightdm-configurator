@@ -1,0 +1,11 @@
+Cosas por hacer para lightdm-configurator(0.1):
+	- Hacer todo XD
+
+Cosas por hacer para lightdm-configurator(0.2):
+	- Visor de Resultados, Para ver el texto y ver en modo demo el resultado
+	- Selección de greeter
+	- Añadir entrada a configuraciones de xfce 
+	- Buscar un logo XD
+	- Cambiar ldm.conf y grt.conf a lightdm.conf y [NOMBRE-GREETER].conf
+	- Script para backup y cambios.
+	- Lector de configuraciones locales, esto va enlazado a el visor.

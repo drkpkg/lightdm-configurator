@@ -1,0 +1,13 @@
+lightdm-configurator (0.3-0uremix1) stable; urgency=low
+
+  * Arreglado el error del evento destroy en el selector de imagenes.
+  * Se usa el comando groups para leer el nombre de usuario
+
+ -- Daniel Coca <daniel.uremix@gmail.com>  Wed, 9 May 2012 14:24:00 -0400
+
+lightdm-configurator (0.2-0uremix1) stable; urgency=low
+
+  * Migración a Gtk3 Completa.
+  * Ningun cambio relevante a la anterior versión. 
+
+ -- Daniel Coca <daniel.uremix@gmail.com>  Mon, 30 Apr 2012 11:43:50 -0400

@@ -1,0 +1,11 @@
+lightdm-configurator(0.3):
+	- Arreglado el error del evento destroy en el selector de imagenes.
+	- Se usa el comando groups para leer el nombre de usuario
+	  
+lightdm-configurator(0.2):
+	- Migración a Gtk-3 iniciada *
+	- Script para copiado y backups todo en uno, solo es necesario poner 
+	  contreseña de administrador para guardar cambios *
+
+lightdm-configurator(0.1):
+	- Inicio del proyecto

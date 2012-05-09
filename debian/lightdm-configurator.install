@@ -1,0 +1,7 @@
+__init__.py /usr/share/lightdm-configurator
+interface_gtk.glade /usr/share/lightdm-configurator
+lightdm-config_gtk3.py /usr/share/lightdm-configurator
+lightdm_reader.py /usr/share/lightdm-configurator
+data/ /usr/share/lightdm-configurator
+lightdm-configurator /usr/bin/
+lightdm-configurator.desktop /usr/share/applications/

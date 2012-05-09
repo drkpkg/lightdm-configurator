@@ -1,0 +1,13 @@
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Configura Lightdm
+Comment=Configura lightdm
+#Terminal=true
+Exec=/usr/bin/lightdm-configurator
+Icon=/usr/share/lightdm-configurator/data/logo.png
+Categories=GNOME;GTK;Settings;DesktopSettings;X-GNOME-Settings-Panel;X-GNOME-PersonalSettings
+X-Ubuntu-Gettext-Domain=lightdm
+X-GNOME-Settings-Panel=lightdm
+GenericName[es_ES]=Configura Lightdm de forma sencilla

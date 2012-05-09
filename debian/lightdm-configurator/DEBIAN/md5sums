@@ -1,0 +1,12 @@
+e06ba483f59139b430a5645c75e25a10  usr/bin/lightdm-configurator
+ccd38cd14d1fb25c9556a6249794f3ac  usr/share/applications/lightdm-configurator.desktop
+a0e79e89e4368f12aacbba875954d3d2  usr/share/doc/lightdm-configurator/README
+a4ad3e0565936ee368c9518df3687afd  usr/share/doc/lightdm-configurator/changelog.Debian.gz
+f6a5904854261562422d19781480160d  usr/share/doc/lightdm-configurator/copyright
+d41d8cd98f00b204e9800998ecf8427e  usr/share/lightdm-configurator/__init__.py
+b2039d233f09b5ca513719e232a094f1  usr/share/lightdm-configurator/data/about_image.png
+8d7e635b351426b112c6b397f762cba2  usr/share/lightdm-configurator/data/lightdm-configurator.svg
+5519d32e4defe81b79f2351c705e68eb  usr/share/lightdm-configurator/data/logo.png
+a6388adf681985f453996a700d1e7d24  usr/share/lightdm-configurator/interface_gtk.glade
+b71757917ced06f697c509283e0a47c2  usr/share/lightdm-configurator/lightdm-config_gtk3.py
+f9613313e09543f297eee0954b42f83e  usr/share/lightdm-configurator/lightdm_reader.py

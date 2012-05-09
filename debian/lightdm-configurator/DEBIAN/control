@@ -1,0 +1,20 @@
+Package: lightdm-configurator
+Version: 0.3-0uremix1
+Architecture: all
+Maintainer: Daniel Coca <daniel.uremix@gmail.com>
+Installed-Size: 156
+Depends: gksu (>= 2), python-configobj, python-gobject, gir1.2-gtk-3.0, lightdm
+Recommends: unity-greeter, lightdm-gtk-greeter
+Section: python
+Priority: extra
+Description: Configura lightdm de forma sencilla
+ lightdm-configurator es una aplicación para poder configurar de
+ .
+ manera fácil lightdm, entre sus opciones tiene:
+ .
+ - Cambio de Wallpaper.
+ - Tema de Iconos y tema de ventana.
+ - Activar Inicio automático.
+ - Activar Inicio de Invitado.
+ .
+ *Para lightdm-gtk, lightdm-qt, lightdm-webkit el soporte es muy limitado

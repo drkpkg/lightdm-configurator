@@ -1,0 +1,26 @@
+Source: lightdm-configurator
+Section: python
+Priority: extra
+Maintainer: Daniel Coca <daniel.uremix@gmail.com>
+Build-Depends: cdbs, debhelper (>= 7), python (>= 2.4), python-support
+XS-Python-Version: >= 2.4
+Standards-Version: 3.8.4
+#Homepage: 
+#Vcs-Git: git://git.debian.org/collab-maint/nugget.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/nugget.git;a=summary
+
+Package: lightdm-configurator
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}, gksu (>= 2), python-configobj, python-gobject, gir1.2-gtk-3.0, lightdm
+Recommends: unity-greeter, lightdm-gtk-greeter
+Description: Configura lightdm de forma sencilla
+ lightdm-configurator es una aplicación para poder configurar de 
+ .
+ manera fácil lightdm, entre sus opciones tiene:
+ .
+ - Cambio de Wallpaper.
+ - Tema de Iconos y tema de ventana.
+ - Activar Inicio automático.
+ - Activar Inicio de Invitado.
+ . 
+ *Para lightdm-gtk, lightdm-qt, lightdm-webkit el soporte es muy limitado 
