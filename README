@@ -1,0 +1,19 @@
+Lightdm Configurator
+
+Tienes carpetas, src y debs:
+
+  - En src esta todo el código fuente del programa.
+  - En debs estan los paquetes para binarios para Debian y Ubuntu.
+
+Aclaro que lightdm configurator tiene soporte limitado para los greeters hechos en gtk, qt y webkit. Pronto estaré
+dando una solución a ese problema.
+
+Lightdm Configurator funciona en Ubuntu desde la 11.04 hasta la actual. En Debian funciona solo en Testing por que 
+Stable no trae las librerías Gtk3.
+
+Sobre la Instalación en otras distribuciones solo ejecutar el install.sh, procura tener python-configobj gir-gtk3 y lightdm
+obviamente. Si quieres desinstalar solo ejecuta el archivo uninstall.sh
+
+Cualquier sugerencia, duda o reporte de errores mandarme un correo a:
+
+daniel.uremix@gmail.com
