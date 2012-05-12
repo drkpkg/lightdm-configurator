@@ -12,9 +12,11 @@ class MainWindow():
 		try:
 			self.Builder.add_from_file("interface_gtk.glade")
 			self.Window = self.Builder.get_object("main_window")
+			self.Window.set_icon("data/logo.png")
 		except:
 			self.Builder.add_from_file("/usr/share/lightdm-configurator/interface_gtk.glade")
 			self.Window = self.Builder.get_object("main_window")
+			self.Window.set_icon_from_file("/usr/share/lightdm-configurator/data/logo.png")
 		
 		self.Window.set_title("Configura Lightdm")
 		
@@ -104,23 +106,17 @@ class MainWindow():
 			print "Cuenta Invitado desactivada"
 #-----------------------------------------------------------------------
 		#EVENTOS
-		#self.Window.connect("delete-event",self.window_quit)
 		self.Window.connect("destroy",self.window_quit)
 		self.Builder.get_object("Bcerrar").connect("clicked",self.window_quit)
 		self.Builder.get_object("Baplicar").connect("clicked", self.apply_changes)
 		self.Builder.get_object("Bacerca").connect("clicked",self.view_about)
 		self.Builder.get_object("autologin1").connect("clicked",self.is_active, self.Builder.get_object("autologin1"))
 		
-		self.Builder.get_object("Bimagen").connect("clicked", self.search_wallpaper)
-		self.Builder.get_object("Bimagen").connect("drag-drop", self.on_drag_data_received)
-		
+		self.Builder.get_object("Bimagen").connect("clicked", self.search_wallpaper)		
 		self.Builder.get_object("Blogo").connect("clicked", self.search_logo)
 #-----------------------------------------------------------------------		
 		#MOSTRANDO TODO
 		self.Window.show()
-		
-	def on_drag_data_received(self, widget, drag_context, x, y, data, info, time):
-		print "HOLA"
 		
 	def window_quit(self, signal):
 		Gtk.main_quit()
@@ -136,7 +132,22 @@ class MainWindow():
 		self.Builder.get_object("Bcerrar1").connect('clicked',self.cerrar,about)
 		self.Builder.get_object("enlace").connect('clicked',self.openurl,self.Builder.get_object("enlace"))
 		about.show()
-#------------------------------------------------------------------------------------------------------
+	
+	def message_window(self, texto):
+		window = self.Builder.get_object("sucess_window")
+		if(texto == False):
+			window.set_title('Error')
+			self.Builder.get_object("label7").set_text('No se aplican los cambios.')
+		else:
+			window.set_title('Behold')
+			self.Builder.get_object("label7").set_text('Cambios Aplicados.')
+			
+		self.Builder.get_object("bcerrar").connect('clicked',self.cerrar, window)
+		window.show()	
+			
+	def cerrar(self, signal, widget):
+		widget.hide()
+		
 	def openurl(self,signal,Widget):
 		if (commands.getoutput("whoami")=="root"):
 			print "Navegando como root, esto puede ser peligroso."
@@ -228,9 +239,6 @@ class MainWindow():
 		Widget.set_preview_widget_active(have_preview)
 
 #------------------------------------------------------------------------------------------------------
-	def cerrar(self, signal, widget):
-		widget.hide()
-
 	def apply_changes(self, signal):
 		
 		self.lightdm.set_background(self.wall)
@@ -253,49 +261,37 @@ class MainWindow():
 		self.lightdm.set_antialias(True)
 		
 		self.lightdm.set_dpi(96)
-		
-		#print self.lightdm.view_new_config_lightdm()
-		#print self.lightdm.view_new_config_greeter()
 
-		try:
-			self.lightdm.write_config_in_other_file("/tmp/ldm.conf","/tmp/grt.conf")
-			#print self.lightdm.get_config()
-			#print self.lightdm.get_config_greeter()
+		ORIG_LDM = "cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.orig"
+		ORIG_GRT = "cp /etc/lightdm/"+self.lightdm.get_greeter()+" /etc/lightdm/"+self.lightdm.get_greeter()+".conf.orig"
+		LDM = "/tmp/ldm/lightdm.conf"
+		GRT = "/tmp/ldm/"+self.lightdm.get_greeter()+".conf"
+		BACK = "/tmp/ldm/mkbackup.sh"
+		
+		
+		os.system("mkdir -p /tmp/ldm/")
+		self.lightdm.write_config_in_other_file(LDM,GRT)
 			
-			#Haciendo respaldos de los archivos si sucede un error
-			#print "gksu cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup && gksu cp /etc/lightdm/"+ self.lightdm.get_greeter() +".conf "+" /etc/lightdm/"+ self.lightdm.get_greeter() +".conf.backup"
-			
-			#Copiando nuevos archivos
-			try:
-				os.system("gksu cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup && gksu cp /etc/lightdm/"
-						+ self.lightdm.get_greeter() +".conf "+" /etc/lightdm/ "+self.lightdm.get_greeter() +".conf.backup"
-						+" && gksu cp /tmp/ldm.conf /etc/lightdm/lightdm.conf && gksu cp /tmp/grt.conf /etc/lightdm/"
-						+self.lightdm.get_greeter()+".conf")
-				os.system("rm /tmp/ldm.conf")
-				os.system("rm /tmp/grt.conf")
-				#self.show_sucess()
-				print "Cambios aplicados."
-			except:
-				#Si un error sucede, se devuelven los backups
-				#print "gksu cp /etc/lightdm/lightdm.conf.backup /etc/lightdm/lightdm.conf && " + "gksu cp "+"/etc/lightdm/"+ self.lightdm.get_greeter() +".conf.backup /etc/lightdm/"+ self.lightdm.get_greeter() +".conf"
-				os.system("gksu cp /etc/lightdm/lightdm.conf.backup /etc/lightdm/lightdm.conf && " + "gksu cp "+"/etc/lightdm/"+ self.lightdm.get_greeter() +".conf.backup /etc/lightdm/"+ self.lightdm.get_greeter() +".conf")
-				#self.show_error()
-				print "Error!!!."
-		except:
-			print "Error, talvez ejecutes esto como un mortal."
-			self.show_error()
+		f = open(BACK,'w')
+		f.write(ORIG_LDM + "\n")
+		f.write(ORIG_GRT + "\n")
+		f.write("cp /tmp/ldm/*.conf /etc/lightdm/")
+		f.close()
+		
+		os.system("echo 1 > /tmp/ldm/copy") # Si copia no modifica esto
+		os.system("chmod +x " + BACK)
+		os.system("gksu " + BACK + " || echo 0 > /tmp/ldm/copy")
+		
+		lol = commands.getoutput("cat /tmp/ldm/copy")
+		
+		if(lol == '0' ):	
+			print "No se cambia nada."
+			self.message_window(False)
+		else:
+			print "Cambios Aplicados."
+			self.message_window(True)
 
 		
 if __name__ == "__main__":
-	#os.path.exists("/tmp/ldm/lock")
-    #if(os.path.exists("/tmp/ldm/lock")):
-	#	print "No puedes iniciar una nueva sesion"
-    #else:
-		#os.system("mkdir -p /tmp/ldm/ && touch /tmp/ldm/lock")
 	MainWindow()
 	Gtk.main()
-		#try:
-		#	os.system("rm -r /tmp/ldm/")
-		#	print "Saliendo"
-		#except:
-		#	print "Saliendo"
