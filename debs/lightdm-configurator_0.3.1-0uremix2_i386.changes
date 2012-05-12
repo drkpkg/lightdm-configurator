@@ -1,0 +1,44 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Fri, 11 May 2012 21:05:00 -0400
+Source: lightdm-configurator
+Binary: lightdm-configurator
+Architecture: source all
+Version: 0.3.1-0uremix2
+Distribution: stable
+Urgency: low
+Maintainer: Daniel Coca <daniel.uremix@gmail.com>
+Changed-By: Daniel Coca <daniel.uremix@gmail.com>
+Description: 
+ lightdm-configurator - Configura lightdm de forma sencilla
+Changes: 
+ lightdm-configurator (0.3.1-0uremix2) stable; urgency=low
+ .
+   * Fix!! la autenticación menos problemática.
+   * Purgando y optimizando ciertas partes del código.
+Checksums-Sha1: 
+ 871b8cadba4a13c1d9ce9ba1c6765c92870d8069 1324 lightdm-configurator_0.3.1-0uremix2.dsc
+ 8b49a6cd6b571326a033a71720b68c6d629638d4 224879 lightdm-configurator_0.3.1-0uremix2.tar.gz
+ 8ac50692227cd8a0326e7d12ecd4a0482aef2c17 50248 lightdm-configurator_0.3.1-0uremix2_all.deb
+Checksums-Sha256: 
+ 3b134a3d42ac1149c71a34d2dcde865811490d0eda17934cceaa5b92325380b4 1324 lightdm-configurator_0.3.1-0uremix2.dsc
+ 269638a0568275e46208a92b045382b458e3eea6c3776d8fc6d1bf3c1f857afa 224879 lightdm-configurator_0.3.1-0uremix2.tar.gz
+ 22158e4d22ccfba8527b4b26fe938db4f34fd3c40bbb63b720f6b9464970345d 50248 lightdm-configurator_0.3.1-0uremix2_all.deb
+Files: 
+ b6756105e8e2714b3335fe734d5a51c2 1324 python extra lightdm-configurator_0.3.1-0uremix2.dsc
+ 555661103679e91c25a7c956d1530c9d 224879 python extra lightdm-configurator_0.3.1-0uremix2.tar.gz
+ e188bd7489c5e02841088dab3fc9dc48 50248 python extra lightdm-configurator_0.3.1-0uremix2_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEcBAEBAgAGBQJPrbmuAAoJENRjr88x2Rxz5HAH/jJwibwt8FJW1irouvQi0wEA
+SFH81bULxeYI68NpavNB4GhfOJ+FibFxk/CXSKV6/h/nPXOTLn4iEPwAKI9JWbXd
+xOkucFxUiJ7qNt1aniVF/May+axvFopCQYcj7YqCTSsc5xcFHt6gCCFTRRc4SW7i
+wWZwNQKgrhZU0KuJSDCQbe4w/40ZA4rO2EPGe/1LMOFeTM39epv1lZ1y1GJz1iYM
+lsFmicDeACcET6j8KPTjeSdnADaHwXhCS6aUWWBM8ffmIyIcX0LoZBlSqwnTV32c
+Q/0X4aoNb9Jv+M7jj9nUf8cQlnx0MQztTPNfiRM/gk+3SyfSPj7UJc7kUGnA1RI=
+=1/eD
+-----END PGP SIGNATURE-----
