@@ -1,3 +1,7 @@
+lightdm-configurator(0.3.1):
+	- Fix!! la autenticación menos problemática.
+	- Purgando y optimizando ciertas partes del código.
+
 lightdm-configurator(0.3):
 	- Arreglado el error del evento destroy en el selector de imagenes.
 	- Se usa el comando groups para leer el nombre de usuario
