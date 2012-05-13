@@ -1,10 +1,11 @@
 #!/bin/sh
 if [ ! -e "/tmp/ldm" ]
-then
-	python /usr/share/lightdm-configurator/lightdm-config_gtk3.py
-	rm -r "/tmp/ldm"
+	then
+		mkdir -p "/tmp/ldm"
+		python /usr/share/lightdm-configurator/lightdm-config_gtk3.py
+		rm -r "/tmp/ldm"
 	
-else rm -r "/tmp/ldm"
-	python /usr/share/lightdm-configurator/lightdm-config_gtk3.py
-	rm -r "/tmp/ldm"
+elif [ -e "/tmp/ldm" ]
+	then 
+		echo "No puedes Iniciar otra sesión."
 fi

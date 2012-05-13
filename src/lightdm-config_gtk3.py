@@ -78,7 +78,10 @@ class MainWindow():
 
 #Finalizando
 		self.Builder.get_object("Bfont").set_font_name(self.lightdm.get_font())
-		self.Builder.get_object("combobox1").set_active(temas.index(self.lightdm.get_theme()))
+		try:
+			self.Builder.get_object("combobox1").set_active(temas.index(self.lightdm.get_theme()))
+		except:
+			self.Builder.get_object("combobox1").set_active(0)
 		
 		try:
 			self.Builder.get_object("combobox2").set_active(iconos.index(self.lightdm.get_icon_theme()))

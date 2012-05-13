@@ -2,7 +2,7 @@ Package: lightdm-configurator
 Version: 0.3-0uremix1
 Architecture: all
 Maintainer: Daniel Coca <daniel.uremix@gmail.com>
-Installed-Size: 156
+Installed-Size: 144
 Depends: gksu (>= 2), python-configobj, python-gobject, gir1.2-gtk-3.0, lightdm
 Recommends: unity-greeter, lightdm-gtk-greeter
 Section: python
