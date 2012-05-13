@@ -12,21 +12,21 @@ Build-Depends: cdbs, debhelper (>= 7), python (>= 2.4), python-support
 Package-List: 
  lightdm-configurator deb python extra
 Checksums-Sha1: 
- acbf29c727a0ff39a3208d949e9c23580f3548e3 224488 lightdm-configurator_0.3-0uremix1.tar.gz
+ 8f7b401bdd713a11845bd0b93595fe89a04b66f8 51586 lightdm-configurator_0.3-0uremix1.tar.gz
 Checksums-Sha256: 
- 24ebe290371de043e6728573042c4472f40bb2036916be93b92fce139284540e 224488 lightdm-configurator_0.3-0uremix1.tar.gz
+ 9e21685d392f19c104610fccf5d4a6a6e46271b197672914ae2e2ec6e35698bd 51586 lightdm-configurator_0.3-0uremix1.tar.gz
 Files: 
- 6907e59e1a40fe6337a2e65d1e5826af 224488 lightdm-configurator_0.3-0uremix1.tar.gz
+ 371bfd995bb2404c147ec6c60a37e1f8 51586 lightdm-configurator_0.3-0uremix1.tar.gz
 Python-Version: >= 2.4
 
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQEcBAEBAgAGBQJPqojlAAoJENRjr88x2Rxz5yMH/2IIjMX52UXZn82T+XCDdM8u
-fD5dBlOQVHBNvz0LSpc+JWLPNTeby+0q7mKR5uiLdhBv6tCZLmIw2b9L5T7G2h1S
-uyZQ10U+j9ZRZGDEC3ectOaq+8ohxsK1Aw5UDcN59Rl8+Zx25zz9ATVhfsdvHE3Q
-wuiPNCRUAgucAlhlofeoQr30QUivHXLz94v432ey8oMk42HioSuRyXTv0T1S87mq
-aTe/b46HU7HW4TV/8mOqoJFoDAUV7+ZLOGoHq6amTAKzCX9BBY+lbQFY7vXk8s7Q
-Xa3BFFeS2laZuiv7dspvZaKkSz3jUb3ywNiL/Rk2ayiwUXvrxiW6t+JvzZCDUP0=
-=S6rP
+iQEcBAEBAgAGBQJPsEBmAAoJENRjr88x2RxzuNkH/2KA1RpCg9s8ELmaB7DRHyHn
+FL5M18hkeQwxSXbPeTEYR91V+72UoBsMVbI9rzLAyEIpgsL7Vu3U7Uyi+TrkmDdY
+ooKMn+QJhOLAxPin+dXnH34oja0RL70aNbeCoxNijla1rk1BRUhEkhoadSxJPWSl
+r0VDoMnqFLlTO+fI/0+LZdrnM/REkHd7bsO83ODhud5wqbWKZsvHonwrC8hr4JEX
+L2qu8jnE+BPO3Qmc9ZRyiFZbO/lulUgoczm+vghU31wHnNMInLaVOKIK5CCo50zh
+tUXcTL+C4dheluwVD5fPR3JJvw0gUMsaqYpmcn3i5pKVbDMx6+hI28+8tuyxCl4=
+=+jzU
 -----END PGP SIGNATURE-----
